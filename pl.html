@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose docs.html</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body class="stackedit">
+    <div class="stackedit__html">
+        <p>Rose docs</p>
+        <h1 id="rose-v1.0">Rose v1.0</h1>
+        <p><img src="https://i.imgur.com/Ew6dbTe.png" alt="Rose avy"></p>
+        <p>Właściciel bota: <code>@Style#9809</code></p>
+        <p>Ostatnia aktualizacja: <code>3/05/2019</code></p>
+        <p><strong>Rose <3 i używa:</strong></p>
+        <ul>
+            <li>Discord.py</li>
+            <li>discordBadoszApiWrapper</li>
+            <li>asyncpg</li>
+            <li>jishaku</li>
+            <li>i wiele, wiele więcej, gdyż jest zrobiony z miłością dla ciebie 💖.</li>
+        </ul>
+        <p>Wielkie podziękowania dla <strong>Any_key13</strong>, który pomógł mi ulepszyć i skorygować wszystkie błędy w tej dokumentacji! ❤️</p>
+        <h1 id="arguments">Arguments</h1>
+        <p><strong>Każdy argument musi zaczynać się z <code>
+                    <</code> i kończyć z <code>>
+                </code>.</strong>
+        <ul>
+            <li><code>@USER</code> - oznaczanie nowego użytkownika</li>
+            <li><code>USER</code> - nazwa(nick) nowego użytkownika</li>
+            <li><code>GUILD</code> - nazwa serwera</li>
+            <li><code>GUILD_COUNT</code> - liczba użytkowników serwera</li>
+            <li><code>GUILD_COUNT+</code> - liczba użytkowników serwera + 1 nowy</li>
+            <li><code>GUILD_OWNER</code> - właściciel serwera</li>
+        </ul>
+        <h1 id="commands">Commands</h1>
+        <p><code>[thing]</code> &lt;- <em>To oznacza, że argument <b>jest</b> obowiązkowy</em>
+        <p><code>{thing}</code> &lt;- <em>To oznacza, że argument <b>nie jest</b> obowiązkowy</em>
+        </p>
+        <p><strong>Mod</strong></p>
+        <ul>
+            <li>
+                <p>set</p>
+                <ul>
+                    <li>self_starring</li>
+                    <li>global_emojis</li>
+                </ul>
+                <p><em>może być:<br>
+                        TRUE: <code>True, 1, enable</code><br>
+                        FALSE: <code>False, 0, disable</code></em></p>
+                <ul>
+                    <li>welcomer_text [text]</li>
+                    <li>welcomer_channel [#channel]</li>
+                </ul>
+            </li>
+            <li>
+                <p>kick [@member]</p>
+            </li>
+            <li>
+                <p>ban [@member]</p>
+            </li>
+            <li>
+                <p>mute [@member time]</p>
+            </li>
+            <li>
+                <p>unmute [@member]</p>
+            </li>
+            <li>
+                <p>clear [amount]</p>
+            </li>
+        </ul>
+        <p><strong>Reaction Role</strong></p>
+        <ul>
+            <li>rr
+                <ul>
+                    <li>add [#channel] [message_id] [@role] [:emoji:]</li>
+                    <li>remove [#channe] [message_id] [:emoji:]</li>
+                    <li>clear [#channel] [message_id]</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Tags</strong></p>
+        <ul>
+            <li>
+                <p>tags (pokazuje tagi dostępne na serwerze)</p>
+            </li>
+            <li>
+                <p>tag</p>
+                <ul>
+                    <li>
+                        <p>create/add [name] {- content} (- content jest opcjonalny, jeżeli go nie dodasz, możesz go dodać
+                            po tym, kiedy bot da instrukcje, jak to zrobić)</p>
+                        <p> <b>Przykład:</b> tag add xxxxxxxxxxxxxx </p>
+                        <p> <b>Przykład 2:</b> tag create xxxxxxxx - wszystko co sobie zamarzysz</p> 
+                    </li>
+                    <li>
+                        <p>edit [name] {- content} (- content jak w przypadku <code>add</code> jest opcjonalny. Nie sądzę, że muszę wyjaśniać co to robi)</p>
+                    </li>
+                    <li>
+                        <p>remove [name] (tak, to usuwa tag, bezpowrotnie) </p>
+                    </li>
+                    <li>
+                        <p>info [name] (robi to, co myślisz, że robi)</p>
+                    </li>
+                    <li>
+                        <p>claim [name] (kiedy oryginalnego twórcy taga nie ma na serwerze, możesz zawłaszczyć tag za pomocą tej komendy)</p>
+                    </li>
+                    <li>
+                        <p>global [guild_id] [name]</p>
+                        <ul>
+                            <li>info [guild_id] [name]</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Emotes</strong><br>
+            Aby to działało musisz ustawić global_emojis na
+            <code>True</code>.<br>
+            I wtedy wpisz <code>;;emote_name;;</code>, aby
+            wysłać emotkę<br>
+            <em>Może być w środku zdania</em></p>
+        <ul>
+            <li>emotes</li>
+            <li>emote
+                <ul>
+                    <li>add [name] [:emoji:] &lt;- <em>Musi być niestandardowa</em></li>
+                    <li>remove [nam]</li>
+                    <li>info [name]</li>
+                    <li>gimme [name]</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>stars</strong></p>
+        <ul>
+            <li>cookieboard [#channel]</li>
+            <li>r_cookieboard</li>
+            <li>show id</li>
+        </ul>
+        <p><strong>Giveaway</strong></p>
+        <ul>
+            <li>create [time] thing</li>
+        </ul>
+        <p><strong>Fun</strong><br>
+            Nie podam tutaj wszystkich komend z tzw. cog-a, <code>fun</code>. Jeśli chcesz zobaczyć je wszystkie użyj
+            komendy help</p>w
+        <ul>
+            <li>hat hat_name</li>
+            <li>who</li>
+            <li>twitter text</li>
+            <li>tb text <em>Jest kilka argumentów do urozmaicenia textboxa</em>
+            </li>
+            <li>fakie s/b @user text - Proszę używajcie tego z mózgiem, nikt nie chce, żebyście wpadli w kłopoty</li>
+            <li>ascii text</li>
+            <li>yafud/irc <em>Dokładnie ta sama rzecz, ale irc jest po angielsku a yafud po polsku</em></li>
+            <li>cleverbot <em>Tekst może być lekko zbugowany, gdyż jest tłumaczony przez google translatora</em></li>
+        </ul>
+        <p><strong>Cat</strong><br>
+            <li>adopt</li>
+            <li>cat</li>
+            <ul>
+                <li>raw</li>
+                <li>play</li>
+                <li>buy</li>
+                <li>feed</li>
+            </ul>
+    </div>
+</body>
+
+</html>
