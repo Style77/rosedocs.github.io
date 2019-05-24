@@ -15,3 +15,8 @@ html {
     font-family: sans-serif;
     background: #36393E;
 }
+
+.main .dbl {
+    position: absolute;
+    bottom: 0;
+}
