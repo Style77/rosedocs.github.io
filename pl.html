@@ -12,10 +12,10 @@
 <body class="stackedit">
     <div class="stackedit__html">
         <p>Rose docs</p>
-        <h1 id="rose-v1.0">Rose v1.0</h1>
+        <h1 id="rose-v1.0">Rose v1.2</h1>
         <p><img src="https://i.imgur.com/Ew6dbTe.png" alt="Rose avy"></p>
         <p>Właściciel bota: <code>@Style#9809</code></p>
-        <p>Ostatnia aktualizacja: <code>08/06/2019</code></p>
+        <p>Ostatnia aktualizacja: <code>22/06/2019</code></p>
         <p><strong>Rose <3 i używa:</strong></p>
         <ul>
             <li>Discord.py</li>
@@ -38,8 +38,9 @@
             <li><code>GUILD_OWNER</code> - właściciel serwera</li>
         </ul>
         <h1 id="commands">Commands</h1>
-        <p><code>[thing]</code> &lt;- <em>To oznacza, że argument <b>jest</b> obowiązkowy</em>
-        <p><code>{thing}</code> &lt;- <em>To oznacza, że argument <b>nie jest</b> obowiązkowy</em>
+        <p><code>[thing]</code> &lt;- <em>To oznacza, że argument <b>jest</b> obowiązkowy.</em>
+        <p><code>{thing}</code> &lt;- <em>To oznacza, że argument <b>nie jest</b> obowiązkowy.</em>
+        <p><code>$thing$</code> &lt;- <em>Dostępne opcje (zazwyczaj oddzielone przecinkiem).</em>
         </p>
         <p><strong>Mod</strong></p>
         <ul>
@@ -54,11 +55,14 @@
                     <li>stars_count</li>
                     <li>warns_kick</li>
                     <li>invite_blocker</li>
-                    <li>blacklist_warn</li>
+                    <li>blacklist_warn - Wiadomość wysyłana po napisaniu wyrazu z blacklisty.</li>
+                    <li>anti_raid - po napisaniu @everyone, bądź tej samej wiadomości tyle razy ile jest ustawiony warns_kick osoba dostaje ostrzeżenie,</li>
+                    <li>anti_link - blokuje wszystkie wysyłane linki,</li>
+                    <li>language $eng, pl$- ustaw język.</li>
                 </ul>
-                <p><em>może być:<br>
-                        TRUE: <code>True, 1, enable</code><br>
-                        FALSE: <code>False, 0, disable</code></em></p>
+                <p><em>Może być:<br>
+                        TRUE: <code>true, 1, enable</code><br>
+                        FALSE: <code>false, 0, disable</code></em></p>
                 <ul>
                     <li>welcomer_text [text]</li>
                     <li>welcomer_channel [#channel]</li>
