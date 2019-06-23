@@ -7,6 +7,9 @@
     <title>Rose docs.html</title>
     <link rel="stylesheet" href="https://stackedit.io/style.css" />
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="gifsee.js/dist/gifsee.min.css">
+    <script src="gifsee.js"></script>
 </head>
     
 <body class="stackedit">
@@ -15,7 +18,7 @@
         <h1 id="rose-v1.0">Rose v1.2</h1>
         <p><img src="https://i.imgur.com/Ew6dbTe.png" alt="Rose avy"></p>
         <p>Właściciel bota: <code>@Style#9809</code></p>
-        <p>Ostatnia aktualizacja: <code>22/06/2019</code></p>
+        <p>Ostatnia aktualizacja: <code>23/06/2019</code></p>
         <p><strong>Rose <3 i używa:</strong></p>
         <ul>
             <li>Discord.py</li>
@@ -40,57 +43,92 @@
         <h1 id="commands">Commands</h1>
         <p><code>[thing]</code> &lt;- <em>To oznacza, że argument <b>jest</b> obowiązkowy.</em>
         <p><code>{thing}</code> &lt;- <em>To oznacza, że argument <b>nie jest</b> obowiązkowy.</em>
-        <p><code>$thing$</code> &lt;- <em>Dostępne opcje (zazwyczaj oddzielone przecinkiem).</em>
+        <p><code>(thing, thing)</code> &lt;- <em>Dostępne opcje (zazwyczaj oddzielone przecinkiem). <strong>Tylko z nich można wybierać!</strong></em>
         </p>
         <p><strong>Mod</strong></p>
+        <p>Komendy moderacyjne, bardzo wiele opcji do ustawienia.</p>
         <ul>
+            <li>
+                <p>setup - interaktywne ustawianie serwera.</p>
+            </li>
             <li>
                 <p>set</p>
                 <ul>
-                    <li>self_starring</li>
-                    <li>welcome_text</li>
-                    <li>welcomer_channel</li>
-                    <li>blacklist</li>
-                    <li>autorole</li>
-                    <li>stars_count</li>
-                    <li>warns_kick</li>
-                    <li>invite_blocker</li>
-                    <li>blacklist_warn - Wiadomość wysyłana po napisaniu wyrazu z blacklisty.</li>
-                    <li>anti_raid - po napisaniu @everyone, bądź tej samej wiadomości tyle razy ile jest ustawiony warns_kick osoba dostaje ostrzeżenie,</li>
-                    <li>anti_link - blokuje wszystkie wysyłane linki,</li>
-                    <li>language $eng, pl$- ustaw język.</li>
+                    <li>self_starring [(TRUE, FALSE)] - jesli jest to włączone to dana samemu sobie rekacja serduszka liczy sie jak dana przez kogoś, czyli zwiększy liczbe reakcji na heartboardzie (normalnie nie jest to możliwe, aby reakcja autora się liczyła).</li>
+                    <li>welcome_text [message] - tekst powitalny.</li>
+                    <li>welcomer_channel [channel] - kanał na który będą wysyłane powitania.</li>
+                    <li>blacklist - wiadomość posiadająca wyraz z blacklisty zostanie usunięta, a osoba która ją wysłała dostanie ostrzeżenie.</li>
+                    <ul>
+                    <li>add [word] - dodaje wyraz do blacklisty.</li>
+                    <li>remove [word] - usuwa wyraz z blacklisty.</li>
+                    <li>show - pokazuje wszystkie wyrazy z blacklisty.</li>
+                    <li>message [message] - Wiadomość wysyłana po napisaniu wyrazu z blacklisty.</li>
+                    </ul>
+                    <li>autorole [role] - ranga automatycznie przypisywana osobie po dołączeniu na serwer.</li>
+                    <li>stars_count [number] - liczba reakcji, po której wiadomość pokaże się na heartboardzie.</li>
+                    <li>warns_kick [number] - ilość ostrzeżeń po której osoba ma zostać wyrzucona, od niej zależy też ilość wysłanych wiadomości zanim osoba dostanie ostrzeżenie, gdy anti_raid jest włączony.</li>
+                    <li>invite_blocker [(TRUE, FALSE)]- blokuje wszystkie zaproszenia.</li>
+                    <img src="gifs_to_docs/invite_blocker.gif"
+                        id="invite_blocker"> </img>
+                    <li>anti_raid [(TRUE, FALSE)] - po napisaniu @everyone, bądź tej samej wiadomości tyle razy ile jest
+                        ustawiony warns_kick osoba dostaje ostrzeżenie.</li>
+                    <li>anti_link [(TRUE, FALSE)] - blokuje wszystkie wysyłane linki.</li>
+                    <img src="gifs_to_docs/anti_link.gif" ,
+                        id="anti_link"></img>
+                    <li>emoji_censor [(TRUE, FALSE)] - cenzuruje wiadomości emotkami.</li>
+                    <img src="gifs_to_docs/emoji_censor.gif"
+                        id="emoji_censor"></img>
+                    <li>language [(eng, pl)]- ustaw język.</li>
                 </ul>
-                <p><em>Może być:<br>
+                <p><em>Aliasy:<br>
                         TRUE: <code>true, 1, enable</code><br>
                         FALSE: <code>false, 0, disable</code></em></p>
                 <ul>
                     <li>welcomer_text [text]</li>
-                    <li>welcomer_channel [#channel]</li>
+                    <li>welcomer_channel [channel]</li>
                 </ul>
             </li>
             <li>
-                <p>kick [@member]</p>
+                <p>youtube - statystyki subskrybcji dla osób z kontami premium.</p>
+                <ul>
+                    <li>add [channel] [channel_name] - dodaje statystyki subskrybcji do danego kanału.</li>
+                    <li>edit [channel] [channel_name] - zmienia kanał(z YouTube) do wyświetlania subskrybcji.</li>
+                    <li>remove [channel] - usuwa statystyki z kanału.</li>
+                </ul>
             </li>
             <li>
-                <p>ban [@member]</p>
+                <p>kick [member] {reason} - wyrzuca osobe z serwera, po tym osoba może wejść na niego jeszcze raz, jeśli posiada zaproszenie.</p>
             </li>
             <li>
-                <p>mute [@member time]</p>
+                <p>ban [member] {reason} - banuje osobe z serwera, przy okazji usuwając jej wiadomości do 7 dniu.</p>
             </li>
             <li>
-                <p>unmute [@member]</p>
+                <p>mute [@member] {time} - wycisza osoba na dany czas, badź dopóki ktoś nie użyje na niej komendy
+                    <code>unmute</code>.</p>
             </li>
             <li>
-                <p>clear [amount]</p>
+                <p>unmute [@member] - "odcisza" osobe, jeśli jest wyciszona.</p>
+            </li>
+            <li>
+                <p>clear [amount] - usuwa daną ilość wiadomości z kanału.</p>
+            </li>
+            <li>
+                <p>prefix [new_prefix] - ustawia nowy prefix.</p>
+            </li>
+            <li>
+                <p>settings - zwraca wszystkie ustawienia serwera.</p>
             </li>
         </ul>
         <p><strong>Reaction Role</strong></p>
         <ul>
             <li>rr
                 <ul>
-                    <li>add [#channel] [message_id] [@role] [:emoji:]</li>
-                    <li>remove [#channe] [message_id] [:emoji:]</li>
-                    <li>clear [#channel] [message_id]</li>
+                    <li>add [channel] [message_id] [role] [emoji] - aby zdobyć id wiadomości, kliknij 3 kropki po prawej
+                        od niej i kliknij copy id, jeśli nie będzie tam nic takiego to musisz włączyć tryb developera w
+                        zakładce <code>Appearance</code></li>
+                    <img src="gifs_to_docs/rr_add.gif" id="rr_add"></img>
+                    <li>remove [channel] [message_id] [emoji] - usuwa reaction role z wiadomości.</li>
+                    <li>clear [channel] [message_id]</li>
                 </ul>
             </li>
         </ul>
@@ -181,5 +219,11 @@
             </ul>
     </div>
 </body>
+
+<script>
+var inviteBlocker = new gifsee(document.getElementById('invite_blocker'));
+var antiLink = new gifsee(document.getElementById('anti_link'));
+var emojiCensor = new gifsee(document.getElementById('emoji_censor'));
+</script>
 
 </html>
